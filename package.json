@@ -9,7 +9,7 @@
     "test/auto": "mocha --compilers js:babel-core/register -R min --watch",
     "build": "./node_modules/.bin/babel src --out-dir dist",
     "prepublish": "npm run build",
-    "preinstall": "npm run build"
+    "preinstall": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
