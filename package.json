@@ -6,7 +6,10 @@
   "scripts": {
     "start": "babel-node example/server.js",
     "test": "mocha --compilers js:babel-core/register",
-    "test/auto": "mocha --compilers js:babel-core/register -R min --watch"
+    "test/auto": "mocha --compilers js:babel-core/register -R min --watch",
+    "build": "./node_modules/.bin/babel src --out-dir dist",
+    "prepublish": "npm run build",
+    "preinstall": "npm run build"
   },
   "repository": {
     "type": "git",
