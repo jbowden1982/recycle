@@ -2,14 +2,11 @@
   "name": "recycle",
   "version": "0.0.1",
   "description": "cycle-restart built from the ground up for xstream",
-  "main": "index.js",
+  "main": "./dist/recycle.js",
   "scripts": {
     "start": "babel-node example/server.js",
     "test": "mocha --compilers js:babel-core/register",
     "test/auto": "mocha --compilers js:babel-core/register -R min --watch",
-    "build": "./node_modules/.bin/babel src --out-dir dist",
-    "prepublish": "npm run build",
-    "preinstall": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
